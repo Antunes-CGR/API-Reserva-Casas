@@ -42,10 +42,10 @@ class HouseController{
 
   async update(req, res){
     const schema = Yup.object().shape({
-      description: Yup.String().require(),
-      price: Yup.number().require(),
-      location: Yup.String().require(),
-      status: Yup.boolean().require(),
+      description: Yup.String().required(),
+      price: Yup.number().required(),
+      location: Yup.String().required(),
+      status: Yup.boolean().required(),
     });
 
     const { filename } = req.file;
